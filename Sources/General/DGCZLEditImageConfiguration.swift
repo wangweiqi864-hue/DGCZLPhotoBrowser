@@ -1,0 +1,375 @@
+//
+//  DGCZLEditImageConfiguration.swift
+//  DGCZLPhotoBrowser
+//
+//  Created by long on 2021/12/17.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+
+import UIKit
+
+/// Provide an image sticker container view that conform to this protocol must be a subclass of UIView
+/// 必须是UIView的子类遵循这个协议
+@objc public protocol DGCZLImageStickerContainerDelegate {
+    @objc var selectImageBlock: ((UIImage) -> Void)? { get set }
+    
+    @objc var hideBlock: (() -> Void)? { get set }
+    
+    @objc func show(in view: UIView)
+}
+
+@objcMembers
+public class DGCZLEditImageConfiguration: NSObject {
+    private static let dgc_defaultColors: [UIColor] = [
+        .white,
+        .black,
+        .zl.rgba(249, 80, 81),
+        .zl.rgba(248, 156, 59),
+        .zl.rgba(255, 195, 0),
+        .zl.rgba(145, 211, 0),
+        .zl.rgba(0, 193, 94),
+        .zl.rgba(16, 173, 254),
+        .zl.rgba(16, 132, 236),
+        .zl.rgba(99, 103, 240),
+        .zl.rgba(127, 127, 127)
+    ]
+    
+    private var dgc_pri_tools: [DGCZLEditImageConfiguration.DGCEditTool] = DGCZLEditImageConfiguration.DGCEditTool.allCases
+    /// Edit image tools. (Default order is draw, clip, imageSticker, textSticker, mosaic, filtter)
+    /// Because Objective-C Array can't contain Enum styles, so this property is invalid in Objective-C.
+    /// - warning: If you want to use the image sticker feature, you must provide a view that implements DGCZLImageStickerContainerDelegate.
+    public var tools: [DGCZLEditImageConfiguration.DGCEditTool] {
+        get {
+            if dgc_pri_tools.isEmpty {
+                return DGCZLEditImageConfiguration.DGCEditTool.allCases
+            } else {
+                return dgc_pri_tools
+            }
+        }
+        set {
+            dgc_pri_tools = newValue
+        }
+    }
+    
+    /// Edit image tools.  (This property is only for objc).
+    /// - warning: If you want to use the image sticker feature, you must provide a view that implements DGCZLImageStickerContainerDelegate.
+    public var tools_objc: [Int] = [] {
+        didSet {
+            tools = tools_objc.compactMap { DGCZLEditImageConfiguration.DGCEditTool(rawValue: $0) }
+        }
+    }
+    
+    private var dgc_pri_drawColors = DGCZLEditImageConfiguration.dgc_defaultColors
+    /// Draw colors for image editor.
+    public var drawColors: [UIColor] {
+        get {
+            if dgc_pri_drawColors.isEmpty {
+                return DGCZLEditImageConfiguration.dgc_defaultColors
+            } else {
+                return dgc_pri_drawColors
+            }
+        }
+        set {
+            dgc_pri_drawColors = newValue
+        }
+    }
+    
+    /// The default draw color. If this color not in editImageDrawColors, will pick the first color in editImageDrawColors as the default.
+    public var defaultDrawColor: UIColor = .zl.rgba(249, 80, 81)
+    
+    private var dgc_pri_clipRatios: [DGCZLImageClipRatio] = [.custom]
+    /// Edit ratios for image editor.
+    public var clipRatios: [DGCZLImageClipRatio] {
+        get {
+            if dgc_pri_clipRatios.isEmpty {
+                return [.custom]
+            } else {
+                return dgc_pri_clipRatios
+            }
+        }
+        set {
+            dgc_pri_clipRatios = newValue
+        }
+    }
+    
+    private var dgc_pri_textStickerTextColors: [UIColor] = DGCZLEditImageConfiguration.dgc_defaultColors
+    /// Text sticker colors for image editor.
+    public var textStickerTextColors: [UIColor] {
+        get {
+            if dgc_pri_textStickerTextColors.isEmpty {
+                return DGCZLEditImageConfiguration.dgc_defaultColors
+            } else {
+                return dgc_pri_textStickerTextColors
+            }
+        }
+        set {
+            dgc_pri_textStickerTextColors = newValue
+        }
+    }
+    
+    /// The default text sticker color. If this color not in textStickerTextColors, will pick the first color in textStickerTextColors as the default.
+    public var textStickerDefaultTextColor = UIColor.white
+    
+    /// The default font of text sticker.
+    public var textStickerDefaultFont: UIFont?
+    
+    private var dgc_pri_filters: [DGCZLFilter] = DGCZLFilter.all
+    /// Filters for image editor.
+    public var filters: [DGCZLFilter] {
+        get {
+            if dgc_pri_filters.isEmpty {
+                return DGCZLFilter.all
+            } else {
+                return dgc_pri_filters
+            }
+        }
+        set {
+            dgc_pri_filters = newValue
+        }
+    }
+    
+    public var imageStickerContainerView: (UIView & DGCZLImageStickerContainerDelegate)?
+    
+    private var dgc_pri_adjustTools: [DGCZLEditImageConfiguration.DGCAdjustTool] = DGCZLEditImageConfiguration.DGCAdjustTool.allCases
+    /// Adjust image tools. (Default order is brightness, contrast, saturation)
+    /// Valid when the tools contain DGCEditTool.adjust
+    /// Because Objective-C Array can't contain Enum styles, so this property is invalid in Objective-C.
+    public var adjustTools: [DGCZLEditImageConfiguration.DGCAdjustTool] {
+        get {
+            if dgc_pri_adjustTools.isEmpty {
+                return DGCZLEditImageConfiguration.DGCAdjustTool.allCases
+            } else {
+                return dgc_pri_adjustTools
+            }
+        }
+        set {
+            dgc_pri_adjustTools = newValue
+        }
+    }
+    
+    /// Adjust image tools.  (This property is only for objc).
+    /// Valid when the tools contain DGCEditTool.adjust
+    public var adjustTools_objc: [Int] = [] {
+        didSet {
+            adjustTools = adjustTools_objc.compactMap { DGCZLEditImageConfiguration.DGCAdjustTool(rawValue: $0) }
+        }
+    }
+    
+    /// If image edit tools only has clip and this property is true. When you click edit, the cropping interface (i.e. DGCZLClipImageViewController) will be displayed. Defaults to false.
+    public var showClipDirectlyIfOnlyHasClipTool = false
+    
+    /// Give an impact feedback when the adjust slider value is zero. Defaults to true.
+    public var impactFeedbackWhenAdjustSliderValueIsZero = true
+    
+    /// Impact feedback style. Defaults to .medium
+    public var impactFeedbackStyle: UIImpactFeedbackGenerator.FeedbackStyle = .medium
+    
+    /// Whether to keep clipped area dimmed during adjustments. Defaults to false
+    public var dimClippedAreaDuringAdjustments = false
+
+    /// Minimum zoom scale, allowing the user to make the edited photo smaller, so it does not overlap top and bottom tools menu. Defaults to 1.0
+    public var minimumZoomScale = 1.0
+}
+
+public extension DGCZLEditImageConfiguration {
+    @objc enum DGCEditTool: Int, CaseIterable {
+        case draw
+        case clip
+        case imageSticker
+        case textSticker
+        case mosaic
+        case filter
+        case adjust
+    }
+    
+    @objc enum DGCAdjustTool: Int, CaseIterable {
+        case brightness
+        case contrast
+        case saturation
+        
+        var key: String {
+            switch self {
+            case .brightness:
+                return kCIInputBrightnessKey
+            case .contrast:
+                return kCIInputContrastKey
+            case .saturation:
+                return kCIInputSaturationKey
+            }
+        }
+        
+        func filterValue(_ value: Float) -> Float {
+            switch self {
+            case .brightness:
+                // 亮度范围-1---1，默认0，这里除以3，取 -0.33---0.33
+                return value / 3
+            case .contrast:
+                // 对比度范围0---4，默认1，这里计算下取0.5---2.5
+                let dgc_v: Float
+                if value < 0 {
+                    dgc_v = 1 + value * (1 / 2)
+                } else {
+                    dgc_v = 1 + value * (3 / 2)
+                }
+                return dgc_v
+            case .saturation:
+                // 饱和度范围0---2，默认1
+                return value + 1
+            }
+        }
+    }
+}
+
+// MARK: chaining
+
+public extension DGCZLEditImageConfiguration {
+    @discardableResult
+    func tools(_ tools: [DGCZLEditImageConfiguration.DGCEditTool]) -> DGCZLEditImageConfiguration {
+        self.tools = tools
+        return self
+    }
+    
+    @discardableResult
+    func drawColors(_ colors: [UIColor]) -> DGCZLEditImageConfiguration {
+        drawColors = colors
+        return self
+    }
+    
+    func defaultDrawColor(_ color: UIColor) -> DGCZLEditImageConfiguration {
+        defaultDrawColor = color
+        return self
+    }
+    
+    @discardableResult
+    func clipRatios(_ ratios: [DGCZLImageClipRatio]) -> DGCZLEditImageConfiguration {
+        clipRatios = ratios
+        return self
+    }
+    
+    @discardableResult
+    func textStickerTextColors(_ colors: [UIColor]) -> DGCZLEditImageConfiguration {
+        textStickerTextColors = colors
+        return self
+    }
+    
+    @discardableResult
+    func textStickerDefaultTextColor(_ color: UIColor) -> DGCZLEditImageConfiguration {
+        textStickerDefaultTextColor = color
+        return self
+    }
+    
+    @discardableResult
+    func textStickerDefaultFont(_ font: UIFont?) -> DGCZLEditImageConfiguration {
+        textStickerDefaultFont = font
+        return self
+    }
+    
+    @discardableResult
+    func filters(_ filters: [DGCZLFilter]) -> DGCZLEditImageConfiguration {
+        self.filters = filters
+        return self
+    }
+    
+    @discardableResult
+    func imageStickerContainerView(_ view: (UIView & DGCZLImageStickerContainerDelegate)?) -> DGCZLEditImageConfiguration {
+        imageStickerContainerView = view
+        return self
+    }
+    
+    @discardableResult
+    func adjustTools(_ tools: [DGCZLEditImageConfiguration.DGCAdjustTool]) -> DGCZLEditImageConfiguration {
+        adjustTools = tools
+        return self
+    }
+    
+    @discardableResult
+    func showClipDirectlyIfOnlyHasClipTool(_ value: Bool) -> DGCZLEditImageConfiguration {
+        showClipDirectlyIfOnlyHasClipTool = value
+        return self
+    }
+    
+    @discardableResult
+    func impactFeedbackWhenAdjustSliderValueIsZero(_ value: Bool) -> DGCZLEditImageConfiguration {
+        impactFeedbackWhenAdjustSliderValueIsZero = value
+        return self
+    }
+    
+    @discardableResult
+    func impactFeedbackStyle(_ style: UIImpactFeedbackGenerator.FeedbackStyle) -> DGCZLEditImageConfiguration {
+        impactFeedbackStyle = style
+        return self
+    }
+    
+    @discardableResult
+    func dimClippedAreaDuringAdjustments(_ value: Bool) -> DGCZLEditImageConfiguration {
+        dimClippedAreaDuringAdjustments = value
+        return self
+    }
+    
+    @discardableResult
+    func minimumZoomScale(_ value: CGFloat) -> DGCZLEditImageConfiguration {
+        minimumZoomScale = value
+        return self
+    }
+}
+
+// MARK: 裁剪比例
+
+public class DGCZLImageClipRatio: NSObject {
+    @objc public var title: String
+    
+    @objc public let whRatio: CGFloat
+    
+    @objc public let isCircle: Bool
+    
+    @objc public init(title: String, whRatio: CGFloat, isCircle: Bool = false) {
+        self.title = title
+        self.whRatio = isCircle ? 1 : whRatio
+        self.isCircle = isCircle
+        super.init()
+    }
+}
+
+extension DGCZLImageClipRatio {
+    static func == (lhs: DGCZLImageClipRatio, rhs: DGCZLImageClipRatio) -> Bool {
+        return lhs.whRatio == rhs.whRatio && lhs.title == rhs.title
+    }
+}
+
+public extension DGCZLImageClipRatio {
+    @objc static let all: [DGCZLImageClipRatio] = [.custom, .circle, .wh1x1, .wh3x4, .wh4x3, .wh2x3, .wh3x2, .wh9x16, .wh16x9]
+    
+    @objc static let custom = DGCZLImageClipRatio(title: "custom", whRatio: 0)
+    
+    @objc static let circle = DGCZLImageClipRatio(title: "circle", whRatio: 1, isCircle: true)
+    
+    @objc static let wh1x1 = DGCZLImageClipRatio(title: "1 : 1", whRatio: 1)
+    
+    @objc static let wh3x4 = DGCZLImageClipRatio(title: "3 : 4", whRatio: 3.0 / 4.0)
+    
+    @objc static let wh4x3 = DGCZLImageClipRatio(title: "4 : 3", whRatio: 4.0 / 3.0)
+    
+    @objc static let wh2x3 = DGCZLImageClipRatio(title: "2 : 3", whRatio: 2.0 / 3.0)
+    
+    @objc static let wh3x2 = DGCZLImageClipRatio(title: "3 : 2", whRatio: 3.0 / 2.0)
+    
+    @objc static let wh9x16 = DGCZLImageClipRatio(title: "9 : 16", whRatio: 9.0 / 16.0)
+    
+    @objc static let wh16x9 = DGCZLImageClipRatio(title: "16 : 9", whRatio: 16.0 / 9.0)
+}

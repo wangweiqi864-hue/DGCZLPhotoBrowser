@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CC461BF2551214700BF96E8 /* DGCZLAddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC461BE2551214600BF96E8 /* DGCZLAddPhotoCell.swift */; };
+		2CC461C22551312C00BF96E8 /* Bool+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC461C12551312C00BF96E8 /* Bool+DGCZLPhotoBrowser.swift */; };
+		3B1C3BE92A9E3E910034D478 /* libswiftAVFoundation.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1C3BE82A9E3E910034D478 /* libswiftAVFoundation.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E406C81C251B4F9B00852E46 /* DGCZLVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E406C81B251B4F9B00852E46 /* DGCZLVideoManager.swift */; };
+		E40ECF4824FFB8BB00A4D923 /* DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40ECF4724FFB8BB00A4D923 /* DGCZLPhotoBrowser.swift */; };
+		E410177925305C73004C4952 /* DGCZLFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E410177825305C73004C4952 /* DGCZLFilter.swift */; };
+		E417AC0224F63E7E00EDDCD2 /* DGCZLEditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E417AC0124F63E7E00EDDCD2 /* DGCZLEditImageViewController.swift */; };
+		E43EFA0C24F13747007067EC /* UIImage+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFA0B24F13747007067EC /* UIImage+DGCZLPhotoBrowser.swift */; };
+		E44A20FB2567B11400FE6CAE /* DGCZLImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A20FA2567B11400FE6CAE /* DGCZLImageStickerView.swift */; };
+		E45690B52530159800783AE6 /* Array+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45690B42530159800783AE6 /* Array+DGCZLPhotoBrowser.swift */; };
+		E462465A24EB9ABF00EF6C57 /* DGCZLFetchImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462465924EB9ABF00EF6C57 /* DGCZLFetchImageOperation.swift */; };
+		E462465E24EBE45000EF6C57 /* DGCZLImageNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462465D24EBE45000EF6C57 /* DGCZLImageNavController.swift */; };
+		E462466024EBEEF800EF6C57 /* DGCZLAlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462465F24EBEEF800EF6C57 /* DGCZLAlbumListController.swift */; };
+		E462466224EBF06F00EF6C57 /* String+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462466124EBF06F00EF6C57 /* String+DGCZLPhotoBrowser.swift */; };
+		E462466424EBF36F00EF6C57 /* UIColor+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462466324EBF36F00EF6C57 /* UIColor+DGCZLPhotoBrowser.swift */; };
+		E462466624ECD93B00EF6C57 /* DGCZLAlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462466524ECD93B00EF6C57 /* DGCZLAlbumListCell.swift */; };
+		E462466A24ED06C700EF6C57 /* DGCZLThumbnailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462466924ED06C700EF6C57 /* DGCZLThumbnailViewController.swift */; };
+		E462466C24ED163A00EF6C57 /* DGCZLCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462466B24ED163A00EF6C57 /* DGCZLCameraCell.swift */; };
+		E462467224EE814500EF6C57 /* DGCZLPhotoPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462467124EE814500EF6C57 /* DGCZLPhotoPreviewController.swift */; };
+		E462467624EF6A7D00EF6C57 /* DGCZLPhotoPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462467524EF6A7D00EF6C57 /* DGCZLPhotoPreviewCell.swift */; };
+		E466804724FB76C50011E332 /* DGCZLEditVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466804624FB76C50011E332 /* DGCZLEditVideoViewController.swift */; };
+		E46EA7D824F79F1C00033853 /* DGCZLClipImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46EA7D724F79F1C00033853 /* DGCZLClipImageViewController.swift */; };
+		E4765DFB25415F87007B2C0F /* DGCZLImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4765DFA25415F87007B2C0F /* DGCZLImagePreviewController.swift */; };
+		E48E52D52507297500619AED /* DGCZLClipImageDismissAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E52D42507297500619AED /* DGCZLClipImageDismissAnimatedTransition.swift */; };
+		E492ABEB24E53575005E1BD5 /* Cell+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492ABEA24E53575005E1BD5 /* Cell+DGCZLPhotoBrowser.swift */; };
+		E492ABED24E5454E005E1BD5 /* DGCZLProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492ABEC24E5454E005E1BD5 /* DGCZLProgressView.swift */; };
+		E4943ABB255A652A00C29B3A /* CGFloat+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4943ABA255A652A00C29B3A /* CGFloat+DGCZLPhotoBrowser.swift */; };
+		E49BD1F724E3CD9E005D7DFB /* DGCZLThumbnailPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BD1F624E3CD9E005D7DFB /* DGCZLThumbnailPhotoCell.swift */; };
+		E49BD1F924E3D332005D7DFB /* DGCZLPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E49BD1F824E3D332005D7DFB /* DGCZLPhotoBrowser.bundle */; };
+		E49BD1FB24E3D515005D7DFB /* Bundle+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BD1FA24E3D515005D7DFB /* Bundle+DGCZLPhotoBrowser.swift */; };
+		E49FD9FE258A150600185885 /* PHAsset+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FD9FD258A150600185885 /* PHAsset+DGCZLPhotoBrowser.swift */; };
+		E4A9CE012505DB91003201C1 /* DGCZLEmbedAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9CE002505DB91003201C1 /* DGCZLEmbedAlbumListView.swift */; };
+		E4C911C524E284B30061DA40 /* DGCZLPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C911C324E284B30061DA40 /* DGCZLPhotoBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4C911D224E2884E0061DA40 /* DGCZLPhotoPreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911D124E2884E0061DA40 /* DGCZLPhotoPreviewSheet.swift */; platformFilter = ios; };
+		E4C911D424E288780061DA40 /* DGCZLPhotoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911D324E288780061DA40 /* DGCZLPhotoConfiguration.swift */; platformFilter = ios; };
+		E4C911D824E298B80061DA40 /* ZLGeneralDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911D724E298B80061DA40 /* ZLGeneralDefine.swift */; platformFilter = ios; };
+		E4C911DA24E2A4910061DA40 /* DGCZLCustomCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911D924E2A4910061DA40 /* DGCZLCustomCamera.swift */; platformFilter = ios; };
+		E4C911DC24E2A69B0061DA40 /* DGCZLPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911DB24E2A69B0061DA40 /* DGCZLPhotoModel.swift */; platformFilter = ios; };
+		E4C911DE24E2AA950061DA40 /* DGCZLAlbumListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911DD24E2AA950061DA40 /* DGCZLAlbumListModel.swift */; platformFilter = ios; };
+		E4C911E024E2ACE20061DA40 /* DGCZLPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C911DF24E2ACE20061DA40 /* DGCZLPhotoManager.swift */; platformFilter = ios; };
+		E4CF57EC24EA63BA00BEBFC6 /* DGCZLProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF57EB24EA63BA00BEBFC6 /* DGCZLProgressHUD.swift */; };
+		E4CF57F024EA923C00BEBFC6 /* ZLLanguageDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF57EF24EA923C00BEBFC6 /* ZLLanguageDefine.swift */; };
+		E4D046F02500A341000BAEC2 /* DGCZLPhotoPreviewAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D046EF2500A341000BAEC2 /* DGCZLPhotoPreviewAnimatedTransition.swift */; };
+		E4D046F22500A361000BAEC2 /* DGCZLPhotoPreviewPopInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D046F12500A361000BAEC2 /* DGCZLPhotoPreviewPopInteractiveTransition.swift */; };
+		E4D06913254C06EB002278C4 /* DGCZLInputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D06912254C06EB002278C4 /* DGCZLInputTextViewController.swift */; };
+		E4D06916254C0F7F002278C4 /* DGCZLTextStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D06915254C0F7F002278C4 /* DGCZLTextStickerView.swift */; };
+		FD0176C92C412031001AD69D /* DGCZLImagePreviewDismissInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0176C82C412031001AD69D /* DGCZLImagePreviewDismissInteractiveTransition.swift */; };
+		FD047622276B6C8500A93FA3 /* ZLEditToolCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD047621276B6C8500A93FA3 /* ZLEditToolCells.swift */; };
+		FD047624276C329800A93FA3 /* DGCZLEditImageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD047623276C329800A93FA3 /* DGCZLEditImageConfiguration.swift */; };
+		FD047629276C7C1C00A93FA3 /* DGCZLAdjustSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD047628276C7C1C00A93FA3 /* DGCZLAdjustSlider.swift */; };
+		FD0DA4FD2C6E27C000B3F4C5 /* PHPhotoLibrary+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0DA4FC2C6E27C000B3F4C5 /* PHPhotoLibrary+DGCZLPhotoBrowser.swift */; };
+		FD1C586B277AB8790037A746 /* UIViewController+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1C586A277AB8790037A746 /* UIViewController+DGCZLPhotoBrowser.swift */; };
+		FD1FAA5A2AC2C170006F95E5 /* DGCZLBaseStickertState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FAA592AC2C170006F95E5 /* DGCZLBaseStickertState.swift */; };
+		FD201F3F286C7D9B005C6B53 /* DGCZLCustomAlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD201F3E286C7D9B005C6B53 /* DGCZLCustomAlertProtocol.swift */; };
+		FD21E4E1272FFE8E00D1D168 /* DGCZLPhotoConfiguration+Chaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD21E4E0272FFE8E00D1D168 /* DGCZLPhotoConfiguration+Chaining.swift */; };
+		FD24655828E2A96200C15B20 /* UIView+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24655728E2A96200C15B20 /* UIView+DGCZLPhotoBrowser.swift */; };
+		FD34FC622AD25A2100AE4344 /* UIScrollView+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34FC612AD25A2100AE4344 /* UIScrollView+DGCZLPhotoBrowser.swift */; };
+		FD3B66982B984BB0009C7353 /* DGCZLWeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B66972B984BB0009C7353 /* DGCZLWeakProxy.swift */; };
+		FD4C971B29F11918000249BF /* DGCZLCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C971A29F11918000249BF /* DGCZLCollectionViewFlowLayout.swift */; };
+		FD5230B5281562DD0034B782 /* DGCZLEnlargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5230B4281562DD0034B782 /* DGCZLEnlargeButton.swift */; };
+		FD74F6DD29345E4100B7916A /* DGCZLBaseStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD74F6DC29345E4100B7916A /* DGCZLBaseStickerView.swift */; };
+		FD8FEA6728C8B9B60041374B /* DGCZLResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8FEA6628C8B9B60041374B /* DGCZLResultModel.swift */; };
+		FDA31DCA2D81AEC4008C17B0 /* DGCZLPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA31DC92D81AEC4008C17B0 /* DGCZLPhotoPicker.swift */; };
+		FDA31DCC2D82B27C008C17B0 /* Runtime+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA31DCB2D82B27C008C17B0 /* Runtime+DGCZLPhotoBrowser.swift */; };
+		FDA31DD02D82DDB0008C17B0 /* DGCZLNoAuthTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA31DCF2D82DDB0008C17B0 /* DGCZLNoAuthTipsView.swift */; };
+		FDA54B8B2876D8CA0077F4FA /* UIFont+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA54B8A2876D8CA0077F4FA /* UIFont+DGCZLPhotoBrowser.swift */; };
+		FDAE00A9297134C100EE9486 /* DGCZLAnimationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAE00A8297134C100EE9486 /* DGCZLAnimationUtils.swift */; };
+		FDB34114280D0D70008F20B3 /* DGCZLPhotoUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB34113280D0D70008F20B3 /* DGCZLPhotoUIConfiguration.swift */; };
+		FDB34268280E6566008F20B3 /* DGCZLPhotoUIConfiguration+Chaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB34267280E6566008F20B3 /* DGCZLPhotoUIConfiguration+Chaining.swift */; };
+		FDBD70FF2C2E9CD10082D2BA /* DGCZLClipOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD70FE2C2E9CD00082D2BA /* DGCZLClipOverlayView.swift */; };
+		FDC6B5FD273B6E1C00973E43 /* DGCZLCameraConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6B5FC273B6E1C00973E43 /* DGCZLCameraConfiguration.swift */; };
+		FDC8ED0B2B0F4032002EB8B9 /* UIGraphicsImageRenderer+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC8ED0A2B0F4032002EB8B9 /* UIGraphicsImageRenderer+DGCZLPhotoBrowser.swift */; };
+		FDCBAFA02B1ED0A9000860FD /* DGCZLWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCBAF9E2B1ED0A9000860FD /* DGCZLWeakProxy.m */; };
+		FDCBAFA12B1ED0A9000860FD /* DGCZLWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FDCBAF9F2B1ED0A9000860FD /* DGCZLWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDCED6F42CDE2CF800A2A94B /* AVCaptureDevice+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCED6F32CDE2CF800A2A94B /* AVCaptureDevice+DGCZLPhotoBrowser.swift */; };
+		FDE1DB76289A4B120003CA4D /* NSError+DGCZLPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE1DB75289A4B120003CA4D /* NSError+DGCZLPhotoBrowser.swift */; };
+		FDE374252AC1AE3700BA7DA0 /* ZLPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE374242AC1AE3700BA7DA0 /* ZLPaths.swift */; };
+		FDF7790B2AC1700F00001015 /* DGCZLEditorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF7790A2AC1700F00001015 /* DGCZLEditorManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CC461BE2551214600BF96E8 /* DGCZLAddPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLAddPhotoCell.swift; sourceTree = "<group>"; };
+		2CC461C12551312C00BF96E8 /* Bool+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		3B1C3BE82A9E3E910034D478 /* libswiftAVFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftAVFoundation.tbd; path = usr/lib/swift/libswiftAVFoundation.tbd; sourceTree = SDKROOT; };
+		E406C81B251B4F9B00852E46 /* DGCZLVideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLVideoManager.swift; sourceTree = "<group>"; };
+		E40ECF4724FFB8BB00A4D923 /* DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoBrowser.swift; sourceTree = "<group>"; };
+		E410177825305C73004C4952 /* DGCZLFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLFilter.swift; sourceTree = "<group>"; };
+		E417AC0124F63E7E00EDDCD2 /* DGCZLEditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLEditImageViewController.swift; sourceTree = "<group>"; };
+		E43EFA0B24F13747007067EC /* UIImage+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E44A20FA2567B11400FE6CAE /* DGCZLImageStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLImageStickerView.swift; sourceTree = "<group>"; };
+		E45690B42530159800783AE6 /* Array+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E462465924EB9ABF00EF6C57 /* DGCZLFetchImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLFetchImageOperation.swift; sourceTree = "<group>"; };
+		E462465D24EBE45000EF6C57 /* DGCZLImageNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLImageNavController.swift; sourceTree = "<group>"; };
+		E462465F24EBEEF800EF6C57 /* DGCZLAlbumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLAlbumListController.swift; sourceTree = "<group>"; };
+		E462466124EBF06F00EF6C57 /* String+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E462466324EBF36F00EF6C57 /* UIColor+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E462466524ECD93B00EF6C57 /* DGCZLAlbumListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLAlbumListCell.swift; sourceTree = "<group>"; };
+		E462466924ED06C700EF6C57 /* DGCZLThumbnailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLThumbnailViewController.swift; sourceTree = "<group>"; };
+		E462466B24ED163A00EF6C57 /* DGCZLCameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLCameraCell.swift; sourceTree = "<group>"; };
+		E462467124EE814500EF6C57 /* DGCZLPhotoPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoPreviewController.swift; sourceTree = "<group>"; };
+		E462467524EF6A7D00EF6C57 /* DGCZLPhotoPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoPreviewCell.swift; sourceTree = "<group>"; };
+		E466804624FB76C50011E332 /* DGCZLEditVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLEditVideoViewController.swift; sourceTree = "<group>"; };
+		E46EA7D724F79F1C00033853 /* DGCZLClipImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLClipImageViewController.swift; sourceTree = "<group>"; };
+		E4765DFA25415F87007B2C0F /* DGCZLImagePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLImagePreviewController.swift; sourceTree = "<group>"; };
+		E48E52D42507297500619AED /* DGCZLClipImageDismissAnimatedTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLClipImageDismissAnimatedTransition.swift; sourceTree = "<group>"; };
+		E492ABEA24E53575005E1BD5 /* Cell+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E492ABEC24E5454E005E1BD5 /* DGCZLProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLProgressView.swift; sourceTree = "<group>"; };
+		E4943ABA255A652A00C29B3A /* CGFloat+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E49BD1F624E3CD9E005D7DFB /* DGCZLThumbnailPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLThumbnailPhotoCell.swift; sourceTree = "<group>"; };
+		E49BD1F824E3D332005D7DFB /* DGCZLPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DGCZLPhotoBrowser.bundle; sourceTree = "<group>"; };
+		E49BD1FA24E3D515005D7DFB /* Bundle+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E49FD9FD258A150600185885 /* PHAsset+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		E4A9CE002505DB91003201C1 /* DGCZLEmbedAlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLEmbedAlbumListView.swift; sourceTree = "<group>"; };
+		E4C911C024E284B30061DA40 /* DGCZLPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGCZLPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C911C324E284B30061DA40 /* DGCZLPhotoBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGCZLPhotoBrowser.h; sourceTree = "<group>"; };
+		E4C911C424E284B30061DA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C911D124E2884E0061DA40 /* DGCZLPhotoPreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoPreviewSheet.swift; sourceTree = "<group>"; };
+		E4C911D324E288780061DA40 /* DGCZLPhotoConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoConfiguration.swift; sourceTree = "<group>"; };
+		E4C911D724E298B80061DA40 /* ZLGeneralDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLGeneralDefine.swift; sourceTree = "<group>"; };
+		E4C911D924E2A4910061DA40 /* DGCZLCustomCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLCustomCamera.swift; sourceTree = "<group>"; };
+		E4C911DB24E2A69B0061DA40 /* DGCZLPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoModel.swift; sourceTree = "<group>"; };
+		E4C911DD24E2AA950061DA40 /* DGCZLAlbumListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLAlbumListModel.swift; sourceTree = "<group>"; };
+		E4C911DF24E2ACE20061DA40 /* DGCZLPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoManager.swift; sourceTree = "<group>"; };
+		E4CF57EB24EA63BA00BEBFC6 /* DGCZLProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLProgressHUD.swift; sourceTree = "<group>"; };
+		E4CF57EF24EA923C00BEBFC6 /* ZLLanguageDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLLanguageDefine.swift; sourceTree = "<group>"; };
+		E4D046EF2500A341000BAEC2 /* DGCZLPhotoPreviewAnimatedTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoPreviewAnimatedTransition.swift; sourceTree = "<group>"; };
+		E4D046F12500A361000BAEC2 /* DGCZLPhotoPreviewPopInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoPreviewPopInteractiveTransition.swift; sourceTree = "<group>"; };
+		E4D06912254C06EB002278C4 /* DGCZLInputTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLInputTextViewController.swift; sourceTree = "<group>"; };
+		E4D06915254C0F7F002278C4 /* DGCZLTextStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLTextStickerView.swift; sourceTree = "<group>"; };
+		FD0176C82C412031001AD69D /* DGCZLImagePreviewDismissInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLImagePreviewDismissInteractiveTransition.swift; sourceTree = "<group>"; };
+		FD047621276B6C8500A93FA3 /* ZLEditToolCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLEditToolCells.swift; sourceTree = "<group>"; };
+		FD047623276C329800A93FA3 /* DGCZLEditImageConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLEditImageConfiguration.swift; sourceTree = "<group>"; };
+		FD047628276C7C1C00A93FA3 /* DGCZLAdjustSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLAdjustSlider.swift; sourceTree = "<group>"; };
+		FD0DA4FC2C6E27C000B3F4C5 /* PHPhotoLibrary+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FD1C586A277AB8790037A746 /* UIViewController+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FD1FAA592AC2C170006F95E5 /* DGCZLBaseStickertState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLBaseStickertState.swift; sourceTree = "<group>"; };
+		FD201F3E286C7D9B005C6B53 /* DGCZLCustomAlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLCustomAlertProtocol.swift; sourceTree = "<group>"; };
+		FD21E4E0272FFE8E00D1D168 /* DGCZLPhotoConfiguration+Chaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DGCZLPhotoConfiguration+Chaining.swift"; sourceTree = "<group>"; };
+		FD24655728E2A96200C15B20 /* UIView+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FD34FC612AD25A2100AE4344 /* UIScrollView+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FD3B66972B984BB0009C7353 /* DGCZLWeakProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGCZLWeakProxy.swift; sourceTree = "<group>"; };
+		FD4C971A29F11918000249BF /* DGCZLCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		FD5142B12BB2BD5A00FCBD05 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		FD5230B4281562DD0034B782 /* DGCZLEnlargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLEnlargeButton.swift; sourceTree = "<group>"; };
+		FD74F6DC29345E4100B7916A /* DGCZLBaseStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLBaseStickerView.swift; sourceTree = "<group>"; };
+		FD8FEA6628C8B9B60041374B /* DGCZLResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLResultModel.swift; sourceTree = "<group>"; };
+		FDA31DC92D81AEC4008C17B0 /* DGCZLPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoPicker.swift; sourceTree = "<group>"; };
+		FDA31DCB2D82B27C008C17B0 /* Runtime+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FDA31DCF2D82DDB0008C17B0 /* DGCZLNoAuthTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLNoAuthTipsView.swift; sourceTree = "<group>"; };
+		FDA54B8A2876D8CA0077F4FA /* UIFont+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FDAE00A8297134C100EE9486 /* DGCZLAnimationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLAnimationUtils.swift; sourceTree = "<group>"; };
+		FDB34113280D0D70008F20B3 /* DGCZLPhotoUIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLPhotoUIConfiguration.swift; sourceTree = "<group>"; };
+		FDB34267280E6566008F20B3 /* DGCZLPhotoUIConfiguration+Chaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DGCZLPhotoUIConfiguration+Chaining.swift"; sourceTree = "<group>"; };
+		FDBD70FE2C2E9CD00082D2BA /* DGCZLClipOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLClipOverlayView.swift; sourceTree = "<group>"; };
+		FDC6B5FC273B6E1C00973E43 /* DGCZLCameraConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLCameraConfiguration.swift; sourceTree = "<group>"; };
+		FDC8ED0A2B0F4032002EB8B9 /* UIGraphicsImageRenderer+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGraphicsImageRenderer+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FDCBAF9E2B1ED0A9000860FD /* DGCZLWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGCZLWeakProxy.m; sourceTree = "<group>"; };
+		FDCBAF9F2B1ED0A9000860FD /* DGCZLWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGCZLWeakProxy.h; sourceTree = "<group>"; };
+		FDCED6F32CDE2CF800A2A94B /* AVCaptureDevice+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FDE1DB75289A4B120003CA4D /* NSError+DGCZLPhotoBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+DGCZLPhotoBrowser.swift"; sourceTree = "<group>"; };
+		FDE374242AC1AE3700BA7DA0 /* ZLPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLPaths.swift; sourceTree = "<group>"; };
+		FDF7790A2AC1700F00001015 /* DGCZLEditorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGCZLEditorManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4C911BD24E284B30061DA40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B1C3BE92A9E3E910034D478 /* libswiftAVFoundation.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E43EFA0424EFBE6C007067EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B1C3BE82A9E3E910034D478 /* libswiftAVFoundation.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4C911B624E284B30061DA40 = {
+			isa = PBXGroup;
+			children = (
+				E4C911C224E284B30061DA40 /* Sources */,
+				E4C911C124E284B30061DA40 /* Products */,
+				E43EFA0424EFBE6C007067EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E4C911C124E284B30061DA40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4C911C024E284B30061DA40 /* DGCZLPhotoBrowser.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4C911C224E284B30061DA40 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E4C911C424E284B30061DA40 /* Info.plist */,
+				E4C911C324E284B30061DA40 /* DGCZLPhotoBrowser.h */,
+				FD5142B12BB2BD5A00FCBD05 /* PrivacyInfo.xcprivacy */,
+				E49BD1F824E3D332005D7DFB /* DGCZLPhotoBrowser.bundle */,
+				E4C911CD24E286C30061DA40 /* General */,
+				E4C911CF24E287700061DA40 /* Edit */,
+				E4C911CE24E287680061DA40 /* Camera */,
+				E4C911CC24E286B90061DA40 /* Extensions */,
+				E4C911CB24E286530061DA40 /* Animation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E4C911CB24E286530061DA40 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				E4D046EF2500A341000BAEC2 /* DGCZLPhotoPreviewAnimatedTransition.swift */,
+				E4D046F12500A361000BAEC2 /* DGCZLPhotoPreviewPopInteractiveTransition.swift */,
+				FD0176C82C412031001AD69D /* DGCZLImagePreviewDismissInteractiveTransition.swift */,
+				E48E52D42507297500619AED /* DGCZLClipImageDismissAnimatedTransition.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		E4C911CC24E286B90061DA40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E49BD1FA24E3D515005D7DFB /* Bundle+DGCZLPhotoBrowser.swift */,
+				E492ABEA24E53575005E1BD5 /* Cell+DGCZLPhotoBrowser.swift */,
+				E462466124EBF06F00EF6C57 /* String+DGCZLPhotoBrowser.swift */,
+				E462466324EBF36F00EF6C57 /* UIColor+DGCZLPhotoBrowser.swift */,
+				E43EFA0B24F13747007067EC /* UIImage+DGCZLPhotoBrowser.swift */,
+				E45690B42530159800783AE6 /* Array+DGCZLPhotoBrowser.swift */,
+				2CC461C12551312C00BF96E8 /* Bool+DGCZLPhotoBrowser.swift */,
+				E4943ABA255A652A00C29B3A /* CGFloat+DGCZLPhotoBrowser.swift */,
+				E49FD9FD258A150600185885 /* PHAsset+DGCZLPhotoBrowser.swift */,
+				FD0DA4FC2C6E27C000B3F4C5 /* PHPhotoLibrary+DGCZLPhotoBrowser.swift */,
+				FD1C586A277AB8790037A746 /* UIViewController+DGCZLPhotoBrowser.swift */,
+				FDA54B8A2876D8CA0077F4FA /* UIFont+DGCZLPhotoBrowser.swift */,
+				FDE1DB75289A4B120003CA4D /* NSError+DGCZLPhotoBrowser.swift */,
+				FD24655728E2A96200C15B20 /* UIView+DGCZLPhotoBrowser.swift */,
+				FD34FC612AD25A2100AE4344 /* UIScrollView+DGCZLPhotoBrowser.swift */,
+				FDC8ED0A2B0F4032002EB8B9 /* UIGraphicsImageRenderer+DGCZLPhotoBrowser.swift */,
+				FDCED6F32CDE2CF800A2A94B /* AVCaptureDevice+DGCZLPhotoBrowser.swift */,
+				FDA31DCB2D82B27C008C17B0 /* Runtime+DGCZLPhotoBrowser.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4C911CD24E286C30061DA40 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E4C911D724E298B80061DA40 /* ZLGeneralDefine.swift */,
+				E4CF57EF24EA923C00BEBFC6 /* ZLLanguageDefine.swift */,
+				E4C911DF24E2ACE20061DA40 /* DGCZLPhotoManager.swift */,
+				E406C81B251B4F9B00852E46 /* DGCZLVideoManager.swift */,
+				E4C911D324E288780061DA40 /* DGCZLPhotoConfiguration.swift */,
+				FD21E4E0272FFE8E00D1D168 /* DGCZLPhotoConfiguration+Chaining.swift */,
+				FDB34113280D0D70008F20B3 /* DGCZLPhotoUIConfiguration.swift */,
+				FDB34267280E6566008F20B3 /* DGCZLPhotoUIConfiguration+Chaining.swift */,
+				FDC6B5FC273B6E1C00973E43 /* DGCZLCameraConfiguration.swift */,
+				FD047623276C329800A93FA3 /* DGCZLEditImageConfiguration.swift */,
+				FD201F3E286C7D9B005C6B53 /* DGCZLCustomAlertProtocol.swift */,
+				E462465D24EBE45000EF6C57 /* DGCZLImageNavController.swift */,
+				FDA31DC92D81AEC4008C17B0 /* DGCZLPhotoPicker.swift */,
+				E4C911D124E2884E0061DA40 /* DGCZLPhotoPreviewSheet.swift */,
+				E462465F24EBEEF800EF6C57 /* DGCZLAlbumListController.swift */,
+				E4A9CE002505DB91003201C1 /* DGCZLEmbedAlbumListView.swift */,
+				FD4C971A29F11918000249BF /* DGCZLCollectionViewFlowLayout.swift */,
+				E462466924ED06C700EF6C57 /* DGCZLThumbnailViewController.swift */,
+				E462467124EE814500EF6C57 /* DGCZLPhotoPreviewController.swift */,
+				E4765DFA25415F87007B2C0F /* DGCZLImagePreviewController.swift */,
+				FDA31DCF2D82DDB0008C17B0 /* DGCZLNoAuthTipsView.swift */,
+				E4C911DB24E2A69B0061DA40 /* DGCZLPhotoModel.swift */,
+				E4C911DD24E2AA950061DA40 /* DGCZLAlbumListModel.swift */,
+				E49BD1F624E3CD9E005D7DFB /* DGCZLThumbnailPhotoCell.swift */,
+				E462466B24ED163A00EF6C57 /* DGCZLCameraCell.swift */,
+				E462466524ECD93B00EF6C57 /* DGCZLAlbumListCell.swift */,
+				E462467524EF6A7D00EF6C57 /* DGCZLPhotoPreviewCell.swift */,
+				2CC461BE2551214600BF96E8 /* DGCZLAddPhotoCell.swift */,
+				E462465924EB9ABF00EF6C57 /* DGCZLFetchImageOperation.swift */,
+				E4CF57EB24EA63BA00BEBFC6 /* DGCZLProgressHUD.swift */,
+				E492ABEC24E5454E005E1BD5 /* DGCZLProgressView.swift */,
+				FD5230B4281562DD0034B782 /* DGCZLEnlargeButton.swift */,
+				E40ECF4724FFB8BB00A4D923 /* DGCZLPhotoBrowser.swift */,
+				FD8FEA6628C8B9B60041374B /* DGCZLResultModel.swift */,
+				FDAE00A8297134C100EE9486 /* DGCZLAnimationUtils.swift */,
+				FDCBAF9F2B1ED0A9000860FD /* DGCZLWeakProxy.h */,
+				FDCBAF9E2B1ED0A9000860FD /* DGCZLWeakProxy.m */,
+				FD3B66972B984BB0009C7353 /* DGCZLWeakProxy.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E4C911CE24E287680061DA40 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				E4C911D924E2A4910061DA40 /* DGCZLCustomCamera.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		E4C911CF24E287700061DA40 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				E417AC0124F63E7E00EDDCD2 /* DGCZLEditImageViewController.swift */,
+				E46EA7D724F79F1C00033853 /* DGCZLClipImageViewController.swift */,
+				E466804624FB76C50011E332 /* DGCZLEditVideoViewController.swift */,
+				E4D06912254C06EB002278C4 /* DGCZLInputTextViewController.swift */,
+				FDBD70FE2C2E9CD00082D2BA /* DGCZLClipOverlayView.swift */,
+				FD1FAA592AC2C170006F95E5 /* DGCZLBaseStickertState.swift */,
+				FD74F6DC29345E4100B7916A /* DGCZLBaseStickerView.swift */,
+				E44A20FA2567B11400FE6CAE /* DGCZLImageStickerView.swift */,
+				E4D06915254C0F7F002278C4 /* DGCZLTextStickerView.swift */,
+				FD047621276B6C8500A93FA3 /* ZLEditToolCells.swift */,
+				FD047628276C7C1C00A93FA3 /* DGCZLAdjustSlider.swift */,
+				E410177825305C73004C4952 /* DGCZLFilter.swift */,
+				FDE374242AC1AE3700BA7DA0 /* ZLPaths.swift */,
+				FDF7790A2AC1700F00001015 /* DGCZLEditorManager.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E4C911BB24E284B30061DA40 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C911C524E284B30061DA40 /* DGCZLPhotoBrowser.h in Headers */,
+				FDCBAFA12B1ED0A9000860FD /* DGCZLWeakProxy.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E4C911BF24E284B30061DA40 /* DGCZLPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4C911C824E284B30061DA40 /* Build configuration list for PBXNativeTarget "DGCZLPhotoBrowser" */;
+			buildPhases = (
+				E4C911BB24E284B30061DA40 /* Headers */,
+				E4C911BC24E284B30061DA40 /* Sources */,
+				E4C911BD24E284B30061DA40 /* Frameworks */,
+				E4C911BE24E284B30061DA40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DGCZLPhotoBrowser;
+			productName = DGCZLPhotoBrowser;
+			productReference = E4C911C024E284B30061DA40 /* DGCZLPhotoBrowser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4C911B724E284B30061DA40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					E4C911BF24E284B30061DA40 = {
+						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = E4C911BA24E284B30061DA40 /* Build configuration list for PBXProject "DGCZLPhotoBrowser" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4C911B624E284B30061DA40;
+			productRefGroup = E4C911C124E284B30061DA40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4C911BF24E284B30061DA40 /* DGCZLPhotoBrowser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4C911BE24E284B30061DA40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49BD1F924E3D332005D7DFB /* DGCZLPhotoBrowser.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4C911BC24E284B30061DA40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4A9CE012505DB91003201C1 /* DGCZLEmbedAlbumListView.swift in Sources */,
+				E48E52D52507297500619AED /* DGCZLClipImageDismissAnimatedTransition.swift in Sources */,
+				FD5230B5281562DD0034B782 /* DGCZLEnlargeButton.swift in Sources */,
+				E4C911D224E2884E0061DA40 /* DGCZLPhotoPreviewSheet.swift in Sources */,
+				E46EA7D824F79F1C00033853 /* DGCZLClipImageViewController.swift in Sources */,
+				E4C911E024E2ACE20061DA40 /* DGCZLPhotoManager.swift in Sources */,
+				E4CF57F024EA923C00BEBFC6 /* ZLLanguageDefine.swift in Sources */,
+				FD24655828E2A96200C15B20 /* UIView+DGCZLPhotoBrowser.swift in Sources */,
+				E4943ABB255A652A00C29B3A /* CGFloat+DGCZLPhotoBrowser.swift in Sources */,
+				FDC8ED0B2B0F4032002EB8B9 /* UIGraphicsImageRenderer+DGCZLPhotoBrowser.swift in Sources */,
+				FD3B66982B984BB0009C7353 /* DGCZLWeakProxy.swift in Sources */,
+				E4765DFB25415F87007B2C0F /* DGCZLImagePreviewController.swift in Sources */,
+				FDB34114280D0D70008F20B3 /* DGCZLPhotoUIConfiguration.swift in Sources */,
+				E466804724FB76C50011E332 /* DGCZLEditVideoViewController.swift in Sources */,
+				E4D06916254C0F7F002278C4 /* DGCZLTextStickerView.swift in Sources */,
+				E462466624ECD93B00EF6C57 /* DGCZLAlbumListCell.swift in Sources */,
+				E4CF57EC24EA63BA00BEBFC6 /* DGCZLProgressHUD.swift in Sources */,
+				FD047622276B6C8500A93FA3 /* ZLEditToolCells.swift in Sources */,
+				FDCED6F42CDE2CF800A2A94B /* AVCaptureDevice+DGCZLPhotoBrowser.swift in Sources */,
+				FD34FC622AD25A2100AE4344 /* UIScrollView+DGCZLPhotoBrowser.swift in Sources */,
+				FDA31DCA2D81AEC4008C17B0 /* DGCZLPhotoPicker.swift in Sources */,
+				E4C911DC24E2A69B0061DA40 /* DGCZLPhotoModel.swift in Sources */,
+				E417AC0224F63E7E00EDDCD2 /* DGCZLEditImageViewController.swift in Sources */,
+				2CC461BF2551214700BF96E8 /* DGCZLAddPhotoCell.swift in Sources */,
+				FDC6B5FD273B6E1C00973E43 /* DGCZLCameraConfiguration.swift in Sources */,
+				FDF7790B2AC1700F00001015 /* DGCZLEditorManager.swift in Sources */,
+				E4D046F22500A361000BAEC2 /* DGCZLPhotoPreviewPopInteractiveTransition.swift in Sources */,
+				FD047629276C7C1C00A93FA3 /* DGCZLAdjustSlider.swift in Sources */,
+				E462466224EBF06F00EF6C57 /* String+DGCZLPhotoBrowser.swift in Sources */,
+				FD21E4E1272FFE8E00D1D168 /* DGCZLPhotoConfiguration+Chaining.swift in Sources */,
+				FD0176C92C412031001AD69D /* DGCZLImagePreviewDismissInteractiveTransition.swift in Sources */,
+				E462466424EBF36F00EF6C57 /* UIColor+DGCZLPhotoBrowser.swift in Sources */,
+				FDA31DCC2D82B27C008C17B0 /* Runtime+DGCZLPhotoBrowser.swift in Sources */,
+				FDE374252AC1AE3700BA7DA0 /* ZLPaths.swift in Sources */,
+				2CC461C22551312C00BF96E8 /* Bool+DGCZLPhotoBrowser.swift in Sources */,
+				E462467624EF6A7D00EF6C57 /* DGCZLPhotoPreviewCell.swift in Sources */,
+				E406C81C251B4F9B00852E46 /* DGCZLVideoManager.swift in Sources */,
+				FDBD70FF2C2E9CD10082D2BA /* DGCZLClipOverlayView.swift in Sources */,
+				FD1FAA5A2AC2C170006F95E5 /* DGCZLBaseStickertState.swift in Sources */,
+				E4C911D424E288780061DA40 /* DGCZLPhotoConfiguration.swift in Sources */,
+				E410177925305C73004C4952 /* DGCZLFilter.swift in Sources */,
+				FDE1DB76289A4B120003CA4D /* NSError+DGCZLPhotoBrowser.swift in Sources */,
+				E492ABEB24E53575005E1BD5 /* Cell+DGCZLPhotoBrowser.swift in Sources */,
+				FDAE00A9297134C100EE9486 /* DGCZLAnimationUtils.swift in Sources */,
+				FD4C971B29F11918000249BF /* DGCZLCollectionViewFlowLayout.swift in Sources */,
+				E49BD1FB24E3D515005D7DFB /* Bundle+DGCZLPhotoBrowser.swift in Sources */,
+				FDCBAFA02B1ED0A9000860FD /* DGCZLWeakProxy.m in Sources */,
+				FD201F3F286C7D9B005C6B53 /* DGCZLCustomAlertProtocol.swift in Sources */,
+				E4D046F02500A341000BAEC2 /* DGCZLPhotoPreviewAnimatedTransition.swift in Sources */,
+				FDB34268280E6566008F20B3 /* DGCZLPhotoUIConfiguration+Chaining.swift in Sources */,
+				E462465A24EB9ABF00EF6C57 /* DGCZLFetchImageOperation.swift in Sources */,
+				FD8FEA6728C8B9B60041374B /* DGCZLResultModel.swift in Sources */,
+				E4C911DE24E2AA950061DA40 /* DGCZLAlbumListModel.swift in Sources */,
+				FDA54B8B2876D8CA0077F4FA /* UIFont+DGCZLPhotoBrowser.swift in Sources */,
+				E49BD1F724E3CD9E005D7DFB /* DGCZLThumbnailPhotoCell.swift in Sources */,
+				FD74F6DD29345E4100B7916A /* DGCZLBaseStickerView.swift in Sources */,
+				E4D06913254C06EB002278C4 /* DGCZLInputTextViewController.swift in Sources */,
+				E492ABED24E5454E005E1BD5 /* DGCZLProgressView.swift in Sources */,
+				E462466A24ED06C700EF6C57 /* DGCZLThumbnailViewController.swift in Sources */,
+				FDA31DD02D82DDB0008C17B0 /* DGCZLNoAuthTipsView.swift in Sources */,
+				FD1C586B277AB8790037A746 /* UIViewController+DGCZLPhotoBrowser.swift in Sources */,
+				E4C911DA24E2A4910061DA40 /* DGCZLCustomCamera.swift in Sources */,
+				FD0DA4FD2C6E27C000B3F4C5 /* PHPhotoLibrary+DGCZLPhotoBrowser.swift in Sources */,
+				E49FD9FE258A150600185885 /* PHAsset+DGCZLPhotoBrowser.swift in Sources */,
+				E462466024EBEEF800EF6C57 /* DGCZLAlbumListController.swift in Sources */,
+				E4C911D824E298B80061DA40 /* ZLGeneralDefine.swift in Sources */,
+				E45690B52530159800783AE6 /* Array+DGCZLPhotoBrowser.swift in Sources */,
+				E40ECF4824FFB8BB00A4D923 /* DGCZLPhotoBrowser.swift in Sources */,
+				E462466C24ED163A00EF6C57 /* DGCZLCameraCell.swift in Sources */,
+				E462467224EE814500EF6C57 /* DGCZLPhotoPreviewController.swift in Sources */,
+				FD047624276C329800A93FA3 /* DGCZLEditImageConfiguration.swift in Sources */,
+				E462465E24EBE45000EF6C57 /* DGCZLImageNavController.swift in Sources */,
+				E44A20FB2567B11400FE6CAE /* DGCZLImageStickerView.swift in Sources */,
+				E43EFA0C24F13747007067EC /* UIImage+DGCZLPhotoBrowser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4C911C624E284B30061DA40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4C911C724E284B30061DA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4C911C924E284B30061DA40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 47UY3G7UH6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZL.DGCZLPhotoBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4C911CA24E284B30061DA40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 47UY3G7UH6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZL.DGCZLPhotoBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4C911BA24E284B30061DA40 /* Build configuration list for PBXProject "DGCZLPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4C911C624E284B30061DA40 /* Debug */,
+				E4C911C724E284B30061DA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4C911C824E284B30061DA40 /* Build configuration list for PBXNativeTarget "DGCZLPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4C911C924E284B30061DA40 /* Debug */,
+				E4C911CA24E284B30061DA40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4C911B724E284B30061DA40 /* Project object */;
+}

@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author                = {'longitachi' => 'longitachi@163.com'}
   s.social_media_url      = 'https://github.com/longitachi'
 
-  s.source                = {:git => 'https://github.com/longitachi/DGCZLPhotoBrowser.git', :tag => s.version}
+  s.source           = { :git => 'https://github.com/wangweiqi864-hue/DGCZLPhotoBrowser.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
 
